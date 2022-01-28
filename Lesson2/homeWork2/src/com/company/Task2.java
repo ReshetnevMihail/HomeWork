@@ -10,10 +10,11 @@ public class Task2 {
         int numA = input.nextInt();
         int numB = input.nextInt();
         int result = 0;
+        //what about negative numbers? Your solution does not cover all cases.
         for(int i = 0; i <= numB; i++){
             result += numA;
         }
-
+//empty line
         System.out.println("Result: " + result);
 
     }
