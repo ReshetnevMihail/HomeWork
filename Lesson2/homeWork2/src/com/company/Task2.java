@@ -11,6 +11,7 @@ public class Task2 {
         int numB = input.nextInt();
         int result = 0;
         //what about negative numbers? Your solution does not cover all cases.
+        //Also it does not properly calculate positive numbers either.
         for(int i = 0; i <= numB; i++){
             result += numA;
         }
