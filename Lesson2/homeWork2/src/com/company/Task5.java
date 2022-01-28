@@ -3,6 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 /// Нарисовать треугольники
+//I needed only a half of triangle and without spaces, but fine.
 public class Task5 {
 
     public void function(){
@@ -38,7 +39,7 @@ public class Task5 {
 
             }
 
-
+//what is the reason of empty lines?
 
 
 }
