@@ -7,6 +7,7 @@ public class Task4 {
 
     public void function(){
         double norm = 10;
+        //what is 7?
        for(int i = 0; i <= 7; ++i){
            double percent = norm * 10/100;
            norm += percent;
