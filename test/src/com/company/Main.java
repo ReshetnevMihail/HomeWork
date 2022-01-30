@@ -75,7 +75,7 @@ public class Main {
 
                 System.out.println("Choose an option: ");
                 int choice = input.nextInt();
-
+//solution could be better. Duplicated code
                 switch (choice) {
                     case (1):
                         obj.sum();
@@ -108,8 +108,8 @@ public class Main {
             System.out.println("Input range: ");
 
             int rage = input.nextInt();
-
-
+//What did I say about this task at the previous lesson? We could use 1 loop instead of 3!
+//Should be placed in a different class
             int sum= 0;
             for(int i = 2; i <= rage; i +=2){
                 sum += i;
