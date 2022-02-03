@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Cycle {
-
+// 'function' is a bad name for method
     public void function(Scanner input){
         System.out.println("Input range: ");
 
