@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-
+//inp- bad name
     public double inp(Scanner input){
 
         System.out.println("Input number: ");
@@ -13,11 +13,12 @@ public class Main {
     }
 
      public double sum(double num1, double num2, Scanner input){
-        Main obj = new Main();
+        Main obj = new Main();// why do you create objects in all your methods? Bad. 
         num1 = obj.inp(input);
         num2 = obj.inp(input);
 
         num1 += num2;
+//you print result in each method. It's code duplication. It will be better to place it after the work is done 
          System.out.println("Result: " + num1);
 
         return num1;
@@ -25,7 +26,7 @@ public class Main {
      }
 
     public double min(double num1, double num2, Scanner input){
-        Main obj = new Main();
+        Main obj = new Main();// think of another approach. It looks bad.
         num1 = obj.inp(input);
         num2 = obj.inp(input);
 
@@ -58,7 +59,7 @@ public class Main {
         return num1;
 
     }
-
+//bad naming. Methods names are represented with verbs
     public int answer(Scanner input){
         int answer ;
         do {
@@ -92,6 +93,7 @@ public class Main {
                 int choice = input.nextInt();
 
                 switch (choice) {
+//why do you use (..)? case 1: is ok too
                     case (1):
                         obj.sum(num1, num2, input);
                         break;
