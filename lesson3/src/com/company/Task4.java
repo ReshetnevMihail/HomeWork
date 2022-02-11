@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 //Есть матрица. Посчитать сумму элементов в каждой строке
-
+//ok
 public class Task4 {
 
     public void function(Scanner scanner) {
