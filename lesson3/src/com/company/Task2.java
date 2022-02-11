@@ -5,7 +5,7 @@ package com.company;
 public class Task2 {
 
     public void function(){
-      String[][] array = new String[10][10];
+      String[][] array = new String[10][10];//if 10x10 then I expect to se 10*10 and so on either. Your's max = 9x9
 
       int multiple = 0;
       String iStr;
@@ -13,7 +13,7 @@ public class Task2 {
       String mulStr;
 
       for (int i = 1; i < 10; i++){
-          iStr = String.valueOf(i);
+          iStr = String.valueOf(i);//int would be better, no need in such output. Think about perfomance firstly.
           for(int j = 1; j < 10; j++){
               multiple = i * j;
 
