@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 //Создать Jagged Array
-
+//ok
 public class Task6 {
     public void function(Scanner scanner) {
         System.out.println("Input size of array: ");
