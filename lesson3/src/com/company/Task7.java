@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 // Нарисовать бабочку
-
+//+
 public class Task7 {
 
     public void function(Scanner scanner) {
