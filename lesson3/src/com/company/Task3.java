@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //Есть матрица.
 //Найти в ней введенное пользователем число и вывести номер столбца и строки
-
+//ok
 public class Task3 {
     public void function(Scanner scanner) {
         System.out.println("Input size of array: ");
