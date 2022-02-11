@@ -21,7 +21,7 @@ public class Task5 {
 
         int sum = 0;
         int index = 0;
-
+//ok, but could be more "mathematical"
         for (int i = 0; i < array.length; i++){
            sum += array[i][index];
             index++;
