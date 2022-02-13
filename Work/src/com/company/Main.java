@@ -1,118 +1,61 @@
 package com.company;
 
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int[] startArray = new int[scanner.nextInt()];
+        int[] array1 = new int[startArray.length/2];
+        int[] array2 = new int[startArray.length/2];
 
-        System.out.println("Input size of array: ");
-        int [][] array = new int[scanner.nextInt()][scanner.nextInt()];
+        Random random = new Random();
 
-        for(int i = 0; i < array.length; i++){
-            for (int j = 0; j < array[i].length; j++){
-                System.out.println("input " + i +" "+ j +": ");
-                array[i][j] = scanner.nextInt();
+        for(int i = 0; i < startArray.length; i++){
+            startArray[i] = random.nextInt(20);
+        }
 
+        int j = 0;
+        for(int i = 0; i < startArray.length; i++){
+            if(i < startArray.length/2)
+                array1[i] = startArray[i];
+            else{
+                array2[j] = startArray[i];
+                j++;
             }
         }
 
-        for(int i = 0; i < array.length; i++){
-            for (int j = 0; j < array[i].length; j++){
-                System.out.print(array[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
-
-/////////////
-
-
-
-        System.out.println("Input size: ");
-        String[] strArray = new String[scanner.nextInt()];
-        String strStart;
-        String strEnd;
-
-        int j = strArray.length - 1;
-
-        for(int i = 0; i < strArray.length; i++) {
-            System.out.println("Input word #" + i + ": ");
-            strArray[i] = scanner.next();
-        }
-
-        System.out.print("Result array: ");
-        for (String i : strArray) {
-            System.out.print(i + ", ");
-        }
-
-        for(int i = 0; i < strArray.length/2; i++){
-            strStart = strArray[i];
-            strEnd = strArray[j];
-            strArray[i] = strEnd;
-            strArray[j] = strStart;
-            j--;
-            if(j == strArray.length/2)
-                break;
-        }
-        System.out.println("");
-
-        System.out.print("Result  array2: ");
-        for (String i : strArray) {
-            System.out.print(i + ", ");
-        }
-        System.out.println("");
-
-
-        ////////
-
-        System.out.println("Input size: ");
-        int[] intArray = new int[scanner.nextInt()];
-
-        for(int i = 0; i < intArray.length; i++) {
-            System.out.println("Input number #" + i + ": ");
-            intArray[i] = scanner.nextInt();
-        }
-
-        System.out.print("Result array: ");
-        for (int i : intArray) {
-            System.out.print(i + ", ");
-        }
-
-
-        System.out.println("");
-
-        int sizeOfEven = 0;
-
-        for(int i = 0; i < intArray.length; i++){
-
-            if(intArray[i] % 2 == 0)
-                sizeOfEven++;
+        int[] arrayCopy1 = Arrays.copyOfRange(startArray,0,startArray.length/2);
+        int[] arrayCopy2 = Arrays.copyOfRange(startArray,startArray.length/2,startArray.length);;
+        
+        System.out.print("startArray: ");
+        for (int i: startArray) {
+            System.out.print(i + "\t");
 
         }
-        int[] evenArray = new int[sizeOfEven];
-        int lenghtOfEvevMin = 0;
-
-        for(int i = 0; i < intArray.length; i++){
-
-            if(intArray[i] % 2 == 0) {
-                evenArray[lenghtOfEvevMin] = intArray[i];
-                lenghtOfEvevMin++;
-            }
-
+        System.out.println();
+        System.out.print("Array1: ");
+        for (int i: array1) {
+            System.out.print(i + "\t");
         }
-
-        System.out.print("Result even array: ");
-        for (int i : evenArray) {
-            System.out.print(i + ", ");
+        System.out.println();
+        System.out.print("Array1: ");
+        for (int i: array2) {
+            System.out.print(i + "\t");
         }
-
-
-
-
-
-
+        System.out.println();
+        System.out.print("ArrayCopy1: ");
+        for (int i: arrayCopy1) {
+            System.out.print(i + "\t");
+        }
+        System.out.println();
+        System.out.print("ArrayCopy2: ");
+        for (int i: arrayCopy2) {
+            System.out.print(i + "\t");
+        }
 
 
 
