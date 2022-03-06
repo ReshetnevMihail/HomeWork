@@ -16,7 +16,7 @@ public class Task1 {
 
     public void countСonsonants(Scanner scanner) {
         String str = initString(scanner);
-
+//also Pattern.compile("[bcdfghjklmnpqrstvwxyz]", Pattern.CASE_INSENSITIVE)
         Pattern consonants = Pattern.compile("(?iu)[bcdfghjklmnpqrstvwxyzбвгджзйклмнпрстфхцчшщ]");
         Matcher matcher = consonants.matcher(str);
 
