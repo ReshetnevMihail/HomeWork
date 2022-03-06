@@ -11,7 +11,8 @@ public class Task4 {
         System.out.println("Input string: ");
         return scanner.next();
     }
-
+//you could create method where you put something you want to replace
+//and with what. Think more globally. Try to not depend on concrete implementation. 
     public static String replaceDot(Scanner scanner) {
         String strOld = initString(scanner);
         return strOld.replace('.', ',');
