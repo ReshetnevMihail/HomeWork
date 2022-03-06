@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,40 +8,27 @@ public class TaskD {
     public void function() {
         Scanner scanner = new Scanner(System.in);
         int[] array = new int[scanner.nextInt()];
+        int[] arrayNew = new int[array.length - 1];
         Random random = new Random();
 
-        for(int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(20);
         }
-
         System.out.print("Array: ");
-        for (int i: array) {
-            System.out.print(i + "\t");
-        }
+        System.out.println(Arrays.toString(array));
 
-        int temp;
+        int yuorNumber = scanner.nextInt();
 
-        for(int i = 0; i< array.length; i++){
-            for(int j = i + 1; j < array.length; j++){
-                if( array[i] > array[j]) {
-                    temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
+        int j = 0;
+        for(int i = 0; i  < array.length; i++){
+            if(yuorNumber != array[i]){
+                arrayNew[j] = array[i];
+                j++;
             }
+
         }
-        System.out.println();
 
         System.out.print("Array: ");
-        for (int i: array) {
-            System.out.print(i + "\t");
+        System.out.println(Arrays.toString(arrayNew));
         }
-        System.out.println();
-
-        System.out.println("Result max sum: " + (array[array.length - 1] + array[array.length - 2]));
-        System.out.println();
-
-        System.out.println("Result min subtraction: " + (array[0] - array[1]));
-
     }
-}

@@ -1,62 +1,30 @@
 package com.company;
 
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.Date;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int[] startArray = new int[scanner.nextInt()];
-        int[] array1 = new int[startArray.length/2];
-        int[] array2 = new int[startArray.length/2];
+    public void outDate(char[] date) throws InterruptedException {
+        for (int i = 0; i < date.length; i++) {
+            Thread.sleep(500);
+            System.out.print(date[i]);
+        }
+    }
 
-        Random random = new Random();
+    public static void badDate(Date date) {
+        System.out.println(date);
 
-        for(int i = 0; i < startArray.length; i++){
-            startArray[i] = random.nextInt(20);
-        }
+    }
 
-        int j = 0;
-        for(int i = 0; i < startArray.length; i++){
-            if(i < startArray.length/2)
-                array1[i] = startArray[i];
-            else{
-                array2[j] = startArray[i];
-                j++;
-            }
-        }
 
-        int[] arrayCopy1 = Arrays.copyOfRange(startArray,0,startArray.length/2);
-        int[] arrayCopy2 = Arrays.copyOfRange(startArray,startArray.length/2,startArray.length);;
-        
-        System.out.print("startArray: ");
-        for (int i: startArray) {
-            System.out.print(i + "\t");
+    public static void main(String[] args) throws InterruptedException {
+        char[] date = {'6', ' ', 'м', 'а', 'р', 'т', 'а', ' ', '2', '0', '2', '2', ' ', 'г', 'о', 'д', 'а'};
+        Main obj = new Main();
+        Date objDate = new Date();
 
-        }
-        System.out.println();
-        System.out.print("Array1: ");
-        for (int i: array1) {
-            System.out.print(i + "\t");
-        }
-        System.out.println();
-        System.out.print("Array1: ");
-        for (int i: array2) {
-            System.out.print(i + "\t");
-        }
-        System.out.println();
-        System.out.print("ArrayCopy1: ");
-        for (int i: arrayCopy1) {
-            System.out.print(i + "\t");
-        }
-        System.out.println();
-        System.out.print("ArrayCopy2: ");
-        for (int i: arrayCopy2) {
-            System.out.print(i + "\t");
-        }
-
+        obj.outDate(date);
+      
+        badDate(objDate);
 
 
     }
