@@ -8,7 +8,7 @@ import java.util.Scanner;
 // Есть массив слов. Нужно отфильтровать его так,
 // чтобы в выходном массиве оказались слова, которые начинаются с буквы “W”/”w”.
 // Было: {"width", "ellipse", "Wrong", "hyperbola», стало: [width, Wrong]
-
+//+
 public class Task2 {
 
     public static String[] initStringArray(Scanner scanner) {
