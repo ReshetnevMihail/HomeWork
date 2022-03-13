@@ -24,12 +24,13 @@ public class StringArray {
         Arrays.sort(array);
         return array;
     }
-
+//replaceLetter
+    //your solution is not clear. Use replace(...) method in String class. It will be easier and more effective.
     public static String[] inpRandomNumber(String[] array) throws IOException {
         Random random = new Random();
         System.out.println("Input latter to change: ");
         char yourLetter = (char) scannerISR.read();
-        StringBuilder str = new StringBuilder(array[0]);
+        StringBuilder str = new StringBuilder(array[0]);//reason ?
         for(int i  = 1; i< array.length;i++){
             str.append(" ").append(array[i]);
         }
@@ -43,5 +44,5 @@ public class StringArray {
         return array;
     }
 
-
+//delete empty lines
 }
