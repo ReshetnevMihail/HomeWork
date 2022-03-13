@@ -64,7 +64,7 @@ public class IntArray {
 
         return index;
     }
-
+//cool!
     public static int[] sortArray(int[] array) {
 
         int low = 0;
