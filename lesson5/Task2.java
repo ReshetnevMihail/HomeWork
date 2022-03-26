@@ -10,8 +10,10 @@ import java.util.Scanner;
 // Было: {"width", "ellipse", "Wrong", "hyperbola», стало: [width, Wrong]
 //+
 public class Task2 {
+    
+    public static Scanner scanner;
 
-    public static String[] initStringArray(Scanner scanner) {
+    public static String[] initStringArray() {
         System.out.println("Input size of array");
         String[] array = new String[scanner.nextInt()];
 
@@ -36,7 +38,7 @@ public class Task2 {
         return counter;
     }
 
-    public String[] createNewArray(Scanner scanner, InputStreamReader scannerISR) throws IOException {
+    public String[] createNewArray(InputStreamReader scannerISR) throws IOException {
         String[] arrayOld = initStringArray(scanner);
         char letter = initFirstLetter(scannerISR);
 
@@ -54,7 +56,7 @@ public class Task2 {
         return arrayNew;
     }
 
-    public void outArray(Scanner scanner, InputStreamReader scannerISR) throws IOException {
+    public void outArray(InputStreamReader scannerISR) throws IOException {
         System.out.println("Result: " + Arrays.toString(createNewArray(scanner, scannerISR)));
     }
 }
